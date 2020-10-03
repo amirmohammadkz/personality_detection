@@ -1,0 +1,6 @@
+numpy==1.19.2
+joblib==0.17.0
+bert-serving-server
+bert-serving-client
+pandas
+sklearn==0.20.0

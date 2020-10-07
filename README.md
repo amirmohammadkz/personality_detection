@@ -48,6 +48,6 @@ If you use this code in your work then please cite the paper - [Personality Trai
   title={Personality Trait Detection Using Bagged SVM over BERT Word Embedding Ensembles},
   author={Kazameini, Amirmohammad and Fatehi, Samin and Mehta, Yash and Eetemadi, Sauleh and Cambria, Erik},
   booktitle={Proceedings of the The Fourth Widening Natural Language Processing Workshop},
-  year={2020}
-}
+  Organization = {Association for Computational Linguistics},
+  year={2020}}
 ```

@@ -38,3 +38,16 @@ python svm_result_calculator.py
 ## Running Time
 
 On an Intel Core i7-4720 HQ CPU, our fine-tuning model only takes about 7 minutes to train.
+
+# Citation
+
+If you use this code in your work then please cite the paper - [Personality Trait Detection Using Bagged SVM over BERT Word Embedding Ensembles](https://sentic.net/personality-detection-using-bagged-svm-over-bert.pdf) with the following:
+
+```
+@inproceedings{kazameinipersonality,
+  title={Personality Trait Detection Using Bagged SVM over BERT Word Embedding Ensembles},
+  author={Kazameini, Amirmohammad and Fatehi, Samin and Mehta, Yash and Eetemadi, Sauleh and Cambria, Erik},
+  booktitle={Proceedings of the The Fourth Widening Natural Language Processing Workshop},
+  year={2020}
+}
+```

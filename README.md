@@ -8,7 +8,7 @@ See the requirements.txt for the list of dependent packages which can be install
 ```bash
 pip -r requirements.txt
 ```
-Specified versions are used in the paper. Note that the updated versions of the requirement modules may change the results. Some experiments verified that the updated sklearn improves the accuracy.
+Specified versions are used in the paper. Note that the updated versions of the requirement modules may change the results. Some experiments verified that the updated sklearn improves the accuracy. However, please also check the [bert-as-service](https://github.com/hanxiao/bert-as-service) requirements (e.g. 1.10<Tensorflow ver<2 is required). The code can be run using Python ver 3.7 . Users' feedback indicated that it cannot be run on Python ver> 3.8
 
 ## Usage
 1- Run shrink_data.py to convert documents to subdocuments. By running this step, BERT can process the whole sub-documents.

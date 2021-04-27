@@ -5,6 +5,8 @@ import svm
 import numpy as np
 import joblib
 from bert_serving.client import BertClient
+import os.path
+from joblib import dump, load
 
 
 def shrink_text(text, clean_string=True):
@@ -139,7 +141,12 @@ def predict_with_model(embeddings, l=0):
         embeddings4layers.append(np.mean(embedding[:, -768 * 4:], axis=0))
     results = []
     for y in range(0, 5):
-        classifier, _, _, _ = svm.classify("essays_mairesse_sb_tokenized_200_max_rev_vector.p", y, -1, 0, add_mairesse=False)
+        model_file_name = 'svm_model_y'+str(y)+'.joblib'
+        if os.path.isfile(model_file_name):
+            classifier = load(model_file_name)
+        else:
+             classifier, _, _, _ = svm.classify("essays_mairesse_sb_tokenized_200_max_rev_vector.p", y, -1, 0, add_mairesse=False)
+             dump(classifier, model_file_name)
         predicts = classifier.predict(embeddings4layers)
         mean = np.mean(predicts)
         if mean != 0.5:
